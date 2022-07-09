@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
     <title>AluraBooks</title>
 </head>
@@ -54,8 +55,11 @@
         </div>
 
         <div class="container">
+
             <a href="#"><img src="img/Favoritos.svg" alt="Meus Favoritos" class="container__imagem"></a>
+
             <a href="#"><img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem"></a>
+
             <a href="#"><img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem"></a>
         </div>
 
@@ -70,6 +74,83 @@
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
 
     </section>
+
+    <section class="carrossel">
+
+        <h2 class="carrossel__titulo">Últimos lançamentos</h2>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre lógica de programação com portugol da Alura Books"></div>
+                <div class="swiper-slide"><img src="img/Liderança.svg" alt="Livro sobre liderança da Alura Books"></div>
+                <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre Javascript assertivo da Alura Books"></div>
+                <div class="swiper-slide"><img src="img/Nodejs.svg" alt="Livro sobre Nodejs da Alura Books"></div>
+                <div class="swiper-slide"><img src="img/Gestão2.svg" alt="Livro sobre Gestão da Alura Books"></div>
+                <div class="swiper-slide"><img src="img/UX.svg" alt="Livro sobre Design UX da Alura Books"></div>
+                
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="card">
+                <!--1º linha-->
+                <div class="card__descricao">
+                    <!--1º coluna-->
+                <div class="descricao">
+                    
+                    <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                    
+                    <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+
+                    <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+
+                </div>
+
+                <!--2º coluna-->
+                <img src="img/Angular.svg" alt="descricao__imagem">
+
+                </div>
+
+                <!--2º linha-->
+                <div class="card__botoes">
+
+                    <!--1ºcoluna-->
+                    <ul class="botoes">
+
+                        <li class="botoes__item"><img src="img/Favoritos.svg" alt="Favoritar livro"></li>
+
+                        <li class="botoes__item"><img src="img/Compras.svg" alt="Colocar no carrinho de compras"></li>
+
+                    </ul>
+
+                    <!--2º coluna-->
+                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                </div>
+
+            </div>
+
+    </section>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+  },
+        });
+    </script>
 </body>
 
 </html>
